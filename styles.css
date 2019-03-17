@@ -8,19 +8,16 @@ body {
 }
 
 header {
-    display: flex;
     height: 5rem;
     background-color: black;
     color: white;
     line-height: 5rem;
     font-size: 2.5rem;
     font-family: 'Roboto Mono', monospace;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    overflow: hidden;
 }
 
-.site_header_link {
+header > a {
     color: white;
     text-decoration: none;
 }
@@ -62,4 +59,5 @@ header {
 
 .emph_italic {
     font-style: italic;
+    display: inline;
 }
