@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on Jonas Uekötter</title><link>/posts/</link><description>Recent content in Posts on Jonas Uekötter</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><copyright>©2020 Jonas Uekötter</copyright><lastBuildDate>Wed, 05 Aug 2020 12:00:00 +0100</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>My Flutter Packages</title><link>/posts/flutter_packages/</link><pubDate>Wed, 05 Aug 2020 12:00:00 +0100</pubDate><guid>/posts/flutter_packages/</guid><description>Hey guys,
+I&amp;rsquo;ve created some nice libraries for Flutter.
+Feedback This is a package which tries to make it really easy to gather feedback from your users. See here for more info.
+feedback ob pub.dev
+Unleash Unleash is a feature toggle service. My package is the recommended unofficial client for Dart as seen in the official repository.
+unleash ob pub.dev
+Splash Splash is a collection of alternativ button clicked effects for Flutter.</description></item></channel></rss>
