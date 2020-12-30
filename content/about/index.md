@@ -1,4 +1,6 @@
 # Moin! Ich bin Jonas!
+
+{{< figure class="avatar" src="/jonas.svg" >}}
         
 Ich bin Student an der [Hochschule Osnabrück](https://hs-osnabrueck.de) und studiere [Verteilte und mobile Systeme](https://www.hs-osnabrueck.de/de/studium/studienangebot/master/informatik-verteilte-und-mobile-anwendungen-msc/)
 mit dem Schwerpunkt Software- und Data-Engineering. Nebenbei
@@ -20,7 +22,7 @@ Praktikten, um die Software zu einer gelungenen Markteinführung zu
 verhelfen und sie über ihren Produktzyklus noch erfolgreicher zu
 machen. 
 
-In meiner Freizeit entwickele und designe ich meine eigenen [Apps](https://play.google.com/store/apps/dev?id=7731055686739169047).
+In meiner Freizeit entwickele und designe ich meine eigenen [Apps](https://play.google.com/store/apps/developer?id=Jonas+Uek%C3%B6tter).
 Desweiteren bin ich Maintainer einer Open-Source-[Flutter](https://flutter.dev)-Library 
 ([feedback](https://pub.dev/packages/feedback)) mit der 
 besseres Kunden- und Nutzer-Feedback generiert werden kann. 
@@ -30,3 +32,11 @@ besseres Kunden- und Nutzer-Feedback generiert werden kann.
 - Zweimaliger Empfänger des [Deutschland Stipendiums](https://www.deutschlandstipendium.de/)
 - Einmaliger Empfänger des [Niedersachsen Stipendiums](https://www.hs-osnabrueck.de/landesstipendium-niedersachsen/)
 - über 100.000 Downloads meiner Hobby-Projekte alleine in Google Play
+
+## My open source work
+
+Besides my own open source work, I've also contributed to some other project 
+as listed below:
+
+- [Sentry Dart & Flutter](https://github.com/getsentry/sentry-dart/commits?author=ueman)
+- [flutter/engine](https://github.com/flutter/engine/commits?author=ueman)
