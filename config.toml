@@ -1,0 +1,31 @@
+baseURL = "http://uekeotter.dev/"
+languageCode = "de-de"
+title = "Jonas Uekötter"
+theme = "hugo-notepadium"
+copyright = "©2020 Jonas Uekötter"
+
+[params]
+AuthorName = "Jonas Uekötter"
+GitHubUser = "ueman"
+style = "dark"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
+dateFormat = "Monday, January 2, 2006"  # if unset, default is "2006-01-02"
+#logo = ""  # if you have a logo png
+
+[params.syntax]
+use = "none"  # builtin: "prismjs", "hljs". "none" means Chroma
+theme = "xcode"
+darkTheme = "xcode-dark"  # apply this theme in dark mode
+
+[[params.nav.custom]]
+title = "About me"
+url = "/about"
+
+[[params.nav.custom]]
+title = "My GitHub"
+url = "https://github.com/ueman"
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
