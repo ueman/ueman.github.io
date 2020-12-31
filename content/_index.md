@@ -5,4 +5,4 @@
 I'm mostly working on mobile stuff for Android and iOS. Other than that I love
 automating those mobile build pipelines.
 
-You'll find me on [GitHub](https://github.com/ueman) and [Twitter](https://twitter.com/ue_man) (I don't really post, but I really appreciate a follow).
+You'll find me on [GitHub](https://github.com/ueman) and [Twitter](https://twitter.com/ue_man).

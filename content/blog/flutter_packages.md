@@ -5,8 +5,6 @@ date: 2020-12-30T12:00:00+01:00
 
 # My Flutter Packages
 
-Hey guys,
-
 I've created some nice [libraries for Flutter](https://pub.dev/publishers/uekoetter.dev/packages).
 
 ## Feedback
