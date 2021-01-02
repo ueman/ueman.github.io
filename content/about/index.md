@@ -1,3 +1,7 @@
++++
+title = "About"
++++
+
 # Moin! Ich bin Jonas!
 
 {{< figure class="avatar" src="/jonas.svg" >}}

@@ -8,6 +8,7 @@ enableEmoji = true
 [params]
   author = "Jonas Uekötter"
   description = ""
+  title = "Jonas Uekötter"
   favicon = "favicon.ico"  # path to a .ico to use as favicon
   [params.footer]
     text = "© 2020"

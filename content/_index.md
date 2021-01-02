@@ -1,3 +1,7 @@
++++
+title = "Jonas Uekötter"
++++
+
 ## Hello, I'm Jonas
 
 {{< figure class="avatar" src="/jonas.svg" >}}

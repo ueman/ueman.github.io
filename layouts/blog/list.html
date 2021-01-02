@@ -2,7 +2,7 @@
 <div class="container">
     <h1>Blog</h1>
     <ul>
-        {{ range .Pages.ByPublishDate }}
+        {{ range sort .Pages.ByPublishDate "Date" "desc" }}
             <li>
                 <a href="{{ .Permalink }}">{{ .Date.Format "2006-01-02" }} | {{ .Title }}</a>
             </li>
