@@ -44,3 +44,6 @@ as listed below:
 
 - [Sentry Dart & Flutter](https://github.com/getsentry/sentry-dart/commits?author=ueman)
 - [flutter/engine](https://github.com/flutter/engine/commits?author=ueman)
+
+
+<iframe src="https://github.com/sponsors/ueman/card" title="Sponsor ueman" height="225" width="600" style="border: 0;"></iframe>
