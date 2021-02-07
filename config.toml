@@ -11,7 +11,7 @@ enableEmoji = true
   title = "Jonas Uekötter"
   favicon = "favicon.ico"  # path to a .ico to use as favicon
   [params.footer]
-    text = "© 2020"
+    text = "© 2021"
 
 [menu]
   [[menu.main]]
