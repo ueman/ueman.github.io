@@ -1,3 +1,7 @@
+---
+title: "Dashboard"
+---
+
 # Dashboard
 
 ## [feedback](https://github.com/ueman/feedback)
@@ -54,9 +58,3 @@
 {{< github repo="application_icon" >}}
 
 ---
-
-## My stats
-
-<img alt="ueman's GitHub stats" max-width="100%" src="https://github-readme-stats.vercel.app/api?username=ueman&show_icons=true">
-
-<img alt="Top Langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ueman&langs_count=8">
