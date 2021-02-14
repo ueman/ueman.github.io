@@ -1,0 +1,40 @@
+<!--
+<script>
+    var lib = '{{ .Get "lib" }}';
+    var url = 'https://pub.dev/api/packages/' + lib + '/score';
+fetch(url, {
+  method: 'GET',
+  mode: 'cors',
+  redirect: 'follow',
+  referrerPolicy: 'unsafe-url',
+  headers: {
+    'Accept': 'application/vnd.pub.v2+json',
+    'User-Agent': 'uekoetter.dev pub dashboard'
+  }
+}).then(function(response) {
+  return response.json();
+}).then(function(data) {
+  document.getElementById('{{ .Get "lib" }}-likes').innerHTML = data['likeCount']
+}).catch(function() {
+  console.log("Booo");
+});
+</script>
+-->
+<table style="overflow: scroll;">
+    <tr>
+      <th>forks</th>
+      <th>stars</th>
+      <th>contributors</th>
+    </tr>
+    <tr>
+      <td>
+        <img alt="GitHub forks" src="https://img.shields.io/github/forks/ueman/{{ .Get "repo" }}">
+      </td>
+      <td>
+        <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/ueman/{{ .Get "repo" }}">
+      </td>
+      <td>
+        <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/ueman/{{ .Get "repo" }}">
+      </td>
+    </tr>
+  </table>

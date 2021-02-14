@@ -1,0 +1,46 @@
+<!--
+<script>
+    var lib = '{{ .Get "lib" }}';
+    var url = 'https://pub.dev/api/packages/' + lib + '/score';
+fetch(url, {
+  method: 'GET',
+  mode: 'cors',
+  redirect: 'follow',
+  referrerPolicy: 'unsafe-url',
+  headers: {
+    'Accept': 'application/vnd.pub.v2+json',
+    'User-Agent': 'uekoetter.dev pub dashboard'
+  }
+}).then(function(response) {
+  return response.json();
+}).then(function(data) {
+  document.getElementById('{{ .Get "lib" }}-likes').innerHTML = data['likeCount']
+}).catch(function() {
+  console.log("Booo");
+});
+</script>
+-->
+<table>
+    <tr>
+      <th>version</th>
+      <th>likes</th>
+      <th>popularity</th>
+      <th>pub points</th>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://pub.dev/packages/{{ .Get "lib" }}">
+          <img src="https://img.shields.io/pub/v/{{ .Get "lib" }}.svg" alt="pub.dev">
+        </a>
+      </td>
+      <td>
+        <img src="https://badges.bar/{{ .Get "lib" }}/likes" alt="likes">
+      </td>
+      <td>
+        <img src="https://badges.bar/{{ .Get "lib" }}/popularity" alt="popularity">
+      </td>
+      <td>
+        <img src="https://badges.bar/{{ .Get "lib" }}/pub%20points" alt="pub points">
+      </td>
+    </tr>
+  </table>
