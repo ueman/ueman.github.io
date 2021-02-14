@@ -1,40 +1,55 @@
-<!--
+
 <script>
-    var lib = '{{ .Get "lib" }}';
-    var url = 'https://pub.dev/api/packages/' + lib + '/score';
+    var repo = '{{ .Get "repo" }}';
+    var url = 'https://api.github.com/repos/ueman/' + repo ;
+    var pullUrl = 'https://api.github.com/repos/ueman/' + repo + '/pulls'
+    var contributorUrl = 'https://api.github.com/repos/ueman/' + repo + '/contributors'
 fetch(url, {
   method: 'GET',
   mode: 'cors',
-  redirect: 'follow',
-  referrerPolicy: 'unsafe-url',
-  headers: {
-    'Accept': 'application/vnd.pub.v2+json',
-    'User-Agent': 'uekoetter.dev pub dashboard'
-  }
 }).then(function(response) {
   return response.json();
 }).then(function(data) {
-  document.getElementById('{{ .Get "lib" }}-likes').innerHTML = data['likeCount']
-}).catch(function() {
-  console.log("Booo");
-});
+  document.getElementById('{{ .Get "repo" }}-forks').innerHTML = data['forks'];
+  document.getElementById('{{ .Get "repo" }}-stars').innerHTML = data['stargazers_count'];
+  document.getElementById('{{ .Get "repo" }}-watchers').innerHTML = data['watchers'];
+  document.getElementById('{{ .Get "repo" }}-open-issues').innerHTML = data['open_issues'];
+}).catch(console.log);
+
+fetch(pullUrl, {
+  method: 'GET',
+  mode: 'cors',
+}).then(function(response) {
+  return response.json();
+}).then(function(data) {
+  document.getElementById('{{ .Get "repo" }}-pulls').innerHTML = data.length;
+}).catch(console.log);
+
+fetch(contributorUrl, {
+  method: 'GET',
+  mode: 'cors',
+}).then(function(response) {
+  return response.json();
+}).then(function(data) {
+  document.getElementById('{{ .Get "repo" }}-contributors').innerHTML = data.length;
+}).catch(console.log);
 </script>
--->
+
 <table style="overflow-x: scroll; display: block;">
     <tr>
-      <th>forks</th>
-      <th>stars</th>
-      <th>contributors</th>
+        <th>open pull requests</th>
+        <th>open issues</th>
+        <th>forks</th>
+        <th>stars</th>
+        <th>contributors</th>
+        <th>watchers</th>
     </tr>
     <tr>
-      <td>
-        <img alt="GitHub forks" src="https://img.shields.io/github/forks/ueman/{{ .Get "repo" }}">
-      </td>
-      <td>
-        <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/ueman/{{ .Get "repo" }}">
-      </td>
-      <td>
-        <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/ueman/{{ .Get "repo" }}">
-      </td>
+        <td id="{{ .Get "repo" }}-pulls" style="text-align: right;"></td>
+        <td id="{{ .Get "repo" }}-open-issues" style="text-align: right;"></td>
+        <td id="{{ .Get "repo" }}-forks" style="text-align: right;"></td>
+        <td id="{{ .Get "repo" }}-stars" style="text-align: right;"></td>
+        <td id="{{ .Get "repo" }}-contributors" style="text-align: right;"></td>
+        <td id="{{ .Get "repo" }}-watchers" style="text-align: right;"></td>
     </tr>
   </table>

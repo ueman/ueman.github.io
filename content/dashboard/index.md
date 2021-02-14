@@ -1,6 +1,12 @@
 ---
 title: "Open Source Dashboard"
 ---
+<style>
+#content img {
+    margin: auto;
+}
+</style>
+
 
 # Dashboard
 
