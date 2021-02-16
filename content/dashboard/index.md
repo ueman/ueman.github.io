@@ -58,3 +58,12 @@ title: "Open Source Dashboard"
 {{< github repo="application_icon" >}}
 
 ---
+
+## [drawable](https://github.com/ueman/drawable)
+
+<img style="display: inline" src="https://github.com/ueman/drawable/workflows/build/badge.svg?branch=main" alt="GitHub Workflow Status">
+
+{{< pub lib="drawable" >}} 
+{{< github repo="drawable" >}}
+
+---
