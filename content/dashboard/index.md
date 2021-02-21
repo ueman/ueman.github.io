@@ -10,8 +10,10 @@ title: "Open Source Dashboard"
 
 # Dashboard
 
-## [feedback](https://github.com/ueman/feedback)
+This is an overview over some of my open source software.
+It is primarily used by myself to get a better impression of its current status.
 
+## [feedback](https://github.com/ueman/feedback)
 
 <a href="https://github.com/ueman/feedback/actions?query=workflow%3Abuild">
   <img style="display: inline" src="https://github.com/ueman/feedback/workflows/build/badge.svg?branch=master"
@@ -61,7 +63,9 @@ title: "Open Source Dashboard"
 
 ## [drawable](https://github.com/ueman/drawable)
 
-<img style="display: inline" src="https://github.com/ueman/drawable/workflows/build/badge.svg?branch=main" alt="GitHub Workflow Status">
+<img style="display: inline" src="https://github.com/ueman/drawable/workflows/
+build/badge.svg?branch=main" alt="GitHub Workflow Status">
+<a href="https://codecov.io/gh/ueman/drawable"><img style="display: inline" src="https://codecov.io/gh/ueman/drawable/branch/main/graph/badge.svg" alt="code coverage"></a>
 
 {{< pub lib="drawable" >}} 
 {{< github repo="drawable" >}}
