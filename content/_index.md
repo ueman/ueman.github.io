@@ -1,5 +1,6 @@
 +++
 title = "Jonas Uekötter"
+description = "Jonas Uekötter is a software developer. His main area of expertise is mobile applications and build automation."
 +++
 
 # Hey 👋 I'm Jonas!

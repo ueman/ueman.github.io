@@ -1,5 +1,6 @@
 ---
 title: "Open Source Dashboard"
+description: "Dashboard & overview of Jonas Uekötter's open source software"
 ---
 <style>
 #content img {
