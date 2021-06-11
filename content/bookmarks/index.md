@@ -11,6 +11,7 @@ title: "Bookmarks"
 
 - [Keep-A-Changelog](https://keepachangelog.com/)
 - [Conventional Changelog](https://www.conventionalcommits.org/en/v1.0.0/)
+- [Conventional Comments (for reviews)](https://conventionalcomments.org/)
 
 # Readmes
 
