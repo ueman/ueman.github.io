@@ -27,5 +27,6 @@ title: "Bookmarks"
 
 - [career-ladders.dev](https://career-ladders.dev/)
     - What are different kinds of roles and what can you expect of them
+- [Dropbox Career Ladder](https://dropbox.github.io/dbx-career-framework/)
 - [TLDR legal](https://tldrlegal.com/)
     - Short explanations of various (software) licenses
