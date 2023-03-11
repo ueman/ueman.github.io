@@ -11,6 +11,14 @@ date: 2023-03-11T10:00:00+02:00
 In this blog post you'll learn which small changes you can do for your app, in order to create a better experience for your users.
 We're focussing on Flutter apps for Android and iOS.
 
+## Acoustic and haptic feedback for a better UX
+
+
+more interactive feedback https://twitter.com/ue_man/status/1632848634051014656?t=2-kch4D6078MC81JtKz01Q&s=19
+
+https://twitter.com/ue_man/status/1632717439531114498?t=822dhNuKIUfqZ5UYfpxmRg&s=19
+
+
 ## Edge to edge mode (Android)
 
 The first tip is to enable the so-called edge to edge mode for Android.
@@ -49,10 +57,26 @@ Please be aware though, that this might cause issues on older Android versions. 
 ## High refresh rate (Android)
 
 Flutter apps are making use of high refresh rates by default on iOS. On Android, however, it isn't that easy. Different manufactures mess with the system and can disable the automatic enabling of high refresh rate.
+One Plus, Oppo and Nothing for example do this. Xiaomi doesn't.
 You can force a high refresh rates to a certain degree by using [display_mode](https://pub.dev/packages/flutter_displaymode).
 
-120hz on Android https://twitter.com/ue_man/status/1633920597460934657?t=PoyWcBzA0tr5UkzUrIKqWQ&s=19
+Add the package as a dependency and change your code from
 
-more interactive feedback https://twitter.com/ue_man/status/1632848634051014656?t=2-kch4D6078MC81JtKz01Q&s=19
+```dart
+void main() {
+  runApp(const MyApp());
+}
+```
 
-https://twitter.com/ue_man/status/1632717439531114498?t=822dhNuKIUfqZ5UYfpxmRg&s=19
+to the following code
+
+```dart
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await FlutterDisplayMode.setHighRefreshRate();
+
+  runApp(const MyApp());
+}
+```
+
+Congratulations, your app runs now at a high refresh rate in most cases.
