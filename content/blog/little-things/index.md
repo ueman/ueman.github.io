@@ -15,17 +15,53 @@ We're focussing on Flutter apps for Android and iOS.
 
 Flutter has various APIs to enrich the UX with haptic or audio feedback. 
 
-The first API is HapticFeedback. It vibrates the device according to the method names. https://api.flutter.dev/flutter/services/HapticFeedback-class.html
+The first API is [HapticFeedback](https://api.flutter.dev/flutter/services/HapticFeedback-class.html). It vibrates the device according to the method names.
+
+```dart
+HapticFeedback.lightImpact();
+HapticFeedback.mediumImpact();
+HapticFeedback.heavyImpact();
+
+HapticFeedback.selectionClick();
+HapticFeedback.vibrate();
+```
 
 See for example this tweet as an example
 
 <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">At <a href="https://twitter.com/visible_health?ref_src=twsrc%5Etfw">@visible_health</a> we also have this little tooltip when dragging across the bars in the plot which has very light haptic feedback on each entry, feels kinda nice <a href="https://t.co/SbzH1FlaGt">pic.twitter.com/SbzH1FlaGt</a></p>&mdash; Dominik Roszkowski (@OrestesGaolin) <a href="https://twitter.com/OrestesGaolin/status/1632720877841178625?ref_src=twsrc%5Etfw">March 6, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Then there's the SystemSound API. It adds acoustic feedback. Please be aware that it's just partly supported depending on the platform. https://api.flutter.dev/flutter/services/SystemSoundType.html
+Then there's the [SystemSound](https://api.flutter.dev/flutter/services/SystemSoundType.html) API. It adds acoustic feedback. Please be aware that it's just partly supported depending on the platform. 
 
-The Feedback API is for adding feedback which is also usable for accessibility concerns. https://api.flutter.dev/flutter/material/Feedback-class.html
+```dart
+// SystemSoundType.alert is only supported on desktop platforms
+SystemSound.play(SystemSoundType.alert);
+SystemSound.play(SystemSoundType.click);
+```
 
+The [Feedback API](https://api.flutter.dev/flutter/material/Feedback-class.html) is for adding feedback which is also usable for accessibility concerns. 
 
+```dart
+class WidgetWithWrappedHandler extends StatelessWidget {
+  const WidgetWithWrappedHandler({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: Feedback.wrapForTap(_onTapHandler, context),
+      onLongPress: Feedback.wrapForLongPress(_onLongPressHandler, context),
+      child: const Text('X'),
+    );
+  }
+
+  void _onTapHandler() {
+    // Respond to tap.
+  }
+
+  void _onLongPressHandler() {
+    // Respond to long press.
+  }
+}
+```
 
 ## Edge to edge mode (Android)
 
@@ -88,3 +124,7 @@ Future<void> main() async {
 ```
 
 Congratulations, your app runs now at a high refresh rate in most cases.
+
+I hope this was insightful for you!
+
+You can follow me on [Twitter](https://twitter.com/ue_man) and [GitHub](https://github.com/ueman).
