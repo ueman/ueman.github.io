@@ -21,11 +21,6 @@ enableEmoji = true
     weight = 1
 
   [[menu.main]]
-    name = "❤️ Donate"
-    url = "/donate"
-    weight = 1
-
-  [[menu.main]]
     name = "📦 OSS"
     url = "/dashboard"
     weight = 1
