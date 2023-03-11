@@ -13,10 +13,18 @@ We're focussing on Flutter apps for Android and iOS.
 
 ## Acoustic and haptic feedback for a better UX
 
+Flutter has various APIs to enrich the UX with haptic or audio feedback. 
 
-more interactive feedback https://twitter.com/ue_man/status/1632848634051014656?t=2-kch4D6078MC81JtKz01Q&s=19
+The first API is HapticFeedback. It vibrates the device according to the method names. https://api.flutter.dev/flutter/services/HapticFeedback-class.html
 
-https://twitter.com/ue_man/status/1632717439531114498?t=822dhNuKIUfqZ5UYfpxmRg&s=19
+See for example this tweet as an example
+
+<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">At <a href="https://twitter.com/visible_health?ref_src=twsrc%5Etfw">@visible_health</a> we also have this little tooltip when dragging across the bars in the plot which has very light haptic feedback on each entry, feels kinda nice <a href="https://t.co/SbzH1FlaGt">pic.twitter.com/SbzH1FlaGt</a></p>&mdash; Dominik Roszkowski (@OrestesGaolin) <a href="https://twitter.com/OrestesGaolin/status/1632720877841178625?ref_src=twsrc%5Etfw">March 6, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Then there's the SystemSound API. It adds acoustic feedback. Please be aware that it's just partly supported depending on the platform. https://api.flutter.dev/flutter/services/SystemSoundType.html
+
+The Feedback API is for adding feedback which is also usable for accessibility concerns. https://api.flutter.dev/flutter/material/Feedback-class.html
+
 
 
 ## Edge to edge mode (Android)
