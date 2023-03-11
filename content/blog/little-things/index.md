@@ -17,14 +17,7 @@ Flutter has various APIs to enrich the UX with haptic or audio feedback.
 
 The first API is [HapticFeedback](https://api.flutter.dev/flutter/services/HapticFeedback-class.html). It vibrates the device according to the method names.
 
-```dart
-HapticFeedback.lightImpact();
-HapticFeedback.mediumImpact();
-HapticFeedback.heavyImpact();
-
-HapticFeedback.selectionClick();
-HapticFeedback.vibrate();
-```
+<script src="https://gist.github.com/ueman/521e80ad26e7c1beddc7f147a3d7398f.js?file=haptic_feedback.dart"></script>
 
 See for example this tweet as an example
 
@@ -32,36 +25,12 @@ See for example this tweet as an example
 
 Then there's the [SystemSound](https://api.flutter.dev/flutter/services/SystemSoundType.html) API. It adds acoustic feedback. Please be aware that it's just partly supported depending on the platform. 
 
-```dart
-// SystemSoundType.alert is only supported on desktop platforms
-SystemSound.play(SystemSoundType.alert);
-SystemSound.play(SystemSoundType.click);
-```
+<script src="https://gist.github.com/ueman/521e80ad26e7c1beddc7f147a3d7398f.js?file=system_sounds.dart"></script>
 
 The [Feedback API](https://api.flutter.dev/flutter/material/Feedback-class.html) is for adding feedback which is also usable for accessibility concerns. 
 
-```dart
-class WidgetWithWrappedHandler extends StatelessWidget {
-  const WidgetWithWrappedHandler({super.key});
+<script src="https://gist.github.com/ueman/521e80ad26e7c1beddc7f147a3d7398f.js?file=feedback.dart"></script>
 
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: Feedback.wrapForTap(_onTapHandler, context),
-      onLongPress: Feedback.wrapForLongPress(_onLongPressHandler, context),
-      child: const Text('X'),
-    );
-  }
-
-  void _onTapHandler() {
-    // Respond to tap.
-  }
-
-  void _onLongPressHandler() {
-    // Respond to long press.
-  }
-}
-```
 
 ## Edge to edge mode (Android)
 
@@ -73,26 +42,9 @@ The first tip is to enable the so-called edge to edge mode for Android.
 
 As you can see in the before screenshot, the app has an iOS-like swipe indicator on a black bar.
 By enabling the edge to edge mode, we also show content behind this indicator.
-In order to do this you just change your code from 
+In order to do this you just change your code to the following
 
-```dart
-void main() {
-  runApp(const MyApp());
-}
-```
-
-to the following code
-
-```dart
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setSystemUIOverlayStyle(
-    const SystemUiOverlayStyle(systemNavigationBarColor: Colors.transparent),
-  );
-  await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
-  runApp(const MyApp());
-}
-```
+<script src="https://gist.github.com/ueman/521e80ad26e7c1beddc7f147a3d7398f.js?file=e2e.dart"></script>
 
 This should be a painless migration, because your code should already be properly adapted to this, since it's the default behavior on newer iOS devices.
 
@@ -104,24 +56,10 @@ Flutter apps are making use of high refresh rates by default on iOS. On Android,
 One Plus, Oppo and Nothing for example do this. Xiaomi doesn't.
 You can force a high refresh rates to a certain degree by using [display_mode](https://pub.dev/packages/flutter_displaymode).
 
-Add the package as a dependency and change your code from
+Add the package as a dependency and change your code to the following:
 
-```dart
-void main() {
-  runApp(const MyApp());
-}
-```
+<script src="https://gist.github.com/ueman/521e80ad26e7c1beddc7f147a3d7398f.js?file=high_refresh_rate.dart"></script>
 
-to the following code
-
-```dart
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await FlutterDisplayMode.setHighRefreshRate();
-
-  runApp(const MyApp());
-}
-```
 
 Congratulations, your app runs now at a high refresh rate in most cases.
 
