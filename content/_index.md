@@ -7,25 +7,32 @@ description = "Jonas Uekötter is a software developer. His main area of experti
 
 {{< figure class="avatar" src="/jonas.svg" >}}
 
-I'm a mobile developer and I
-work mostly with [Flutter](https://flutter.dev) to create wonderful experiences.
+I'm a mobile developer and I work mainly with [Flutter](https://flutter.dev) to create wonderful mobile experiences.
 
-You can reach and follow me on [Twitter](https://twitter.com/ue_man) if you want to.
+Reach me at 
+- [twitter.com/ue_man](https://twitter.com/ue_man)
+- [github.com/ueman](https://github.com/ueman)
+- [LinkedIn](https://www.linkedin.com/in/jonas-uekoetter)
+- [Blog at Medium](https://medium.com/@jonasuekoetter)
 
-## My open source work
+## Talks & Public Appearances
 
-- [feedback](https://pub.dev/packages/feedback)
-- [splash](https://pub.dev/packages/splash)
-- [Unleash client for Dart](https://pub.dev/packages/unleash)
+- [Distributed Tracing with Flutter and dart_frog](https://www.meetup.com/flutter-meetup-hamburg/events/293470285/)
+- [How to use WebViews to get up and running fast](https://medium.com/mediamarktsaturn-tech-blog/how-to-use-webviews-to-get-up-and-running-fast-d3599c884c2c) was presented as a talk at a Meetup in Barcelona and as a guest talk at [TH Rosenheim](https://www.th-rosenheim.de/)
 
-Besides my own open source work, I've also contributed to other great projects: 
+I'm always looking for more speaking opportunities, so please reach out to me on one of the social channels mentioned above.
 
-- [Sentry Dart & Flutter](https://github.com/getsentry/sentry-dart/commits?author=ueman)
-- [BMW's Lumberdash](https://github.com/bmw-tech/lumberdash/commits?author=ueman)
-- [Flutter Engine](https://github.com/flutter/engine/commits?author=ueman)
+# Meaningful Open Source Work
 
-## Scholarships
+- Significant contributions to [Sentry Dart & Flutter](https://github.com/getsentry/sentry-dart/commits?author=ueman)
+- Co-Maintainer of [dio](https://pub.dev/packages/dio)
+- [Flutter Engine](https://github.com/flutter/engine/commits?author=ueman) & [Flutter Framework](https://github.com/flutter/flutter/commits?author=ueman) contributions
+- My open source package [feedback](https://pub.dev/packages/feedback) is a [Flutter Favorite](https://docs.flutter.dev/packages-and-plugins/favorites)
+
+## Scholarships & Awards
+
 I've received several scholarships:
 
 - I've been granted a [Deutschland Stipendium](https://www.deutschlandstipendium.de/) two times
 - One time receiver of the [Niedersachsen Stipendium](https://www.hs-osnabrueck.de/landesstipendium-niedersachsen/)
+- My open source package [feedback](https://pub.dev/packages/feedback) is a [Flutter Favorite](https://docs.flutter.dev/packages-and-plugins/favorites)
